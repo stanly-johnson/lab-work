@@ -17,20 +17,20 @@ public class applettwo extends JApplet implements ActionListener
 		c.setLayout(new FlowLayout());
 		txt2= new JTextField(10);
 		c.add(txt2);
-		bt=new JButton(Send);
+		bt=new JButton("Send");
 		c.add(bt);
 		bt.addActionListener(this);
-		ta1=new JTextArea(20,10);
+		ta2=new JTextArea(20,10);
 		c.add(ta2);
 		
 	}
 	public void actionPerformed(ActionEvent ae)
 	{
 		
-	 	JApplet first1=(JApplet).getAppletContext().getApplet("first");
+	 	JApplet first1=(JApplet)getAppletContext().getApplet("first");
 		((appletone)first1).ta1.append("second>"+txt2.getText()+"\n");
-		txt1.append("second>"+txt2.getText()+"\n");
-		txt1.setText("");
+		ta2.append("second>"+txt2.getText()+"\n");
+		ta2.setText("");
 	
 	}
-}	
+}
