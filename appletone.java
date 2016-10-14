@@ -1,15 +1,13 @@
 //Program for simple inter applet communication
-mport java.awt.*;
+import java.awt.*;
 import java.io.*;
 import java.applet.*;
-import javax.swing.*;
 import java.awt.event.*;
-
-/*<applet code="Applet2a.java" width=900 height=900 name="first"> 
-</applet>*/
-/*<applet code="Applet2b.java" width=900 height=900 name="second"> 
-</applet>*/
-
+import javax.swing.*;
+//<applet code="appletone.java" width=900 height=900 name="first"> 
+//</applet>
+//<applet code="applettwo.java" width=900 height=900 name="second"> 
+//</applet>
 public class appletone extends JApplet implements ActionListener
 {
 	JTextField txt1;
@@ -30,10 +28,9 @@ public class appletone extends JApplet implements ActionListener
 	}
 	public void actionPerformed(ActionEvent ae)
 	{
-	 	JApplet second1=(JApplet).getAppletContext().getApplet("second");
+	 	JApplet second1=(JApplet)getAppletContext().getApplet("second");
 		((applettwo)second1).ta2.append("first>"+txt1.getText()+"\n");
-		txt1.append("first>"+txt1.getText()+"\n");
-		txt1.setText("");
+		ta1.append("first>"+txt1.getText()+"\n");
+		ta1.setText("");
 	}
-}	
-
+}
