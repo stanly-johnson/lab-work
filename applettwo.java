@@ -1,3 +1,4 @@
+//Jva program for simple inter applet communication
 import java.awt.*;
 import java.io.*;
 import java.applet.*;
