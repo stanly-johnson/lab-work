@@ -1,4 +1,5 @@
-import java.awt.*;
+//Program for simple inter applet communication
+mport java.awt.*;
 import java.io.*;
 import java.applet.*;
 import javax.swing.*;
