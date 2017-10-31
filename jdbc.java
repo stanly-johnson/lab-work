@@ -25,8 +25,7 @@ public class con
     Connection c = DriverManager.getConnection(CONNECTION,p);
 	Statement s = c.createStatement();
 	try
-	{
-	int n;
+	{int n;
 	 do{
     System.out.println("1.Insert details\t2.Display all\t 3.Display with rollno\t4.Delete data\t5.Update table\t6.exit");
 	n=Integer.parseInt(br.readLine()); 
@@ -70,8 +69,6 @@ public class con
 		}
 	}while(n!=6);
 s.close(); 
-
-
  }
  catch(IOException ex){
         System.out.println (ex.toString());
